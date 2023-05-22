@@ -49,7 +49,7 @@ function Login({setUser, user,userType,setUserType}) {
     console.log('Refresh token:', refresh_token);
       const type = response.data.type;
       if (type === 'patient') {
-        navigate('/login'); // Redirect to an error page
+        navigate('/Salman_junior/login'); // Redirect to an error page
         alert("You Can Login Just From App ")
         return;
       }
@@ -99,7 +99,7 @@ function Login({setUser, user,userType,setUserType}) {
         } catch (err) {
           console.log(err);
           clearInterval(intervalId);
-          navigate("/login")
+          navigate("/Salman_junior/login")
           auth.logout();
         }
       }
