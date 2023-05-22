@@ -12,25 +12,25 @@ function Navbar() {
           {/* IF NO USER  */}
         <Logo src='/Logo/logo.png' alt='2'/>
         <HeaderMenu>
-        <NavLink to='/'>
+        <NavLink to='/Salman_junior/'>
   <span>Home</span>
   </NavLink>
         {auth?.user === null && (
-    <NavLink to='/login'>
+    <NavLink to='/Salman_junior/login'>
        <span>Login</span>
     </NavLink>
   )}
     {/* START  OF ADMIN  */}
 {/* IF ADMIN LOGIN */}
      {auth?.user !== null  && a === "doctor" && (
-    <NavLink to='/showreservation'>
+    <NavLink to='/Salman_junior/showreservation'>
    <span>ShowPatient</span>
    </NavLink>
   )}
   {/* END OF ADMIN  */}
    {/* START  OF Reception  */}
   {auth?.user !== null  && a === "reception" && (
-    <NavLink to='/reception'>
+    <NavLink to='/Salman_junior/reception'>
    <span>checkAcount</span>
    </NavLink>
   )}
@@ -39,7 +39,7 @@ function Navbar() {
 
     {/* doctor SHOW Paitient */}
    {auth?.user !== null  && a === "admin" && (
-    <NavLink to='/AdminDashboard'>
+    <NavLink to='/Salman_junior/AdminDashboard'>
    <span>AdminDashboard</span>
    </NavLink>
   )}
@@ -48,7 +48,7 @@ function Navbar() {
         </HeaderMenu>
         {/* IF USER LOGIN */}
         {auth?.user !== null && a === "doctor" && (
-     <NavLink to='/profile'>
+     <NavLink to='/Salman_junior/profile'>
     <UserImage
               src={auth.gender === 'male' ? "/Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "/Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
               gender={auth.gender}/>
@@ -56,7 +56,7 @@ function Navbar() {
   )}
      {/* IF USER reception */}
      {auth?.user !== null && a === "reception" && (
-     <NavLink to='/profile'>
+     <NavLink to='/Salman_junior/profile'>
     <UserImage
               src={auth.gender === 'male' ? "/Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "/Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
               gender={auth.gender}/>
@@ -64,7 +64,7 @@ function Navbar() {
   )}
     {/* Admin Profile */}
     {auth?.user !== null  && a === "admin" && (
-    <NavLink to='/profile'>
+    <NavLink to='/Salman_junior/profile'>
     <UserImage 
               src={auth.gender === 'male' ? "/Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "/Images/kisspng-avatar-computer-icons-employers-5adee1aa013f97.4762672515245562020051.png"}
               gender={auth.gender}/>
