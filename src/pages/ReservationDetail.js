@@ -288,7 +288,7 @@ function ReservationDetail() {
         <br/>   <br/>
         </B>
         
-        <Link to='/showreservation'>go back</Link>
+        <Link to='/Salman_junior/login/showreservation'>go back</Link>
       </Form>
       </OptionButton>
       </Options>
@@ -331,7 +331,7 @@ const OptionButton = styled.button`
     transition: all 0.3s ease 0s;
     margin: 20px;
     @media (max-width:768px){
-      width: 385px;
+      width: 339px;
       transform: translateX(5px);
     }
 `;
