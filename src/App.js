@@ -22,25 +22,25 @@ function App() {
     <div className="App">
      <BrowserRouter>
      <Routes>
-      <Route path='/' element={<ShareLayOut/>}>
+      <Route path='/Salman_junior/' element={<ShareLayOut/>}>
         <Route index element={<Home/>}/>
 
         {/* Login protect profile / choseDoctor  */}
-        <Route path='/login' element={<Login
+        <Route path='/Salman_junior/login' element={<Login
         user={user}
         setUser={setUser}
         setKey={setKey}
         userType={userType}
         setUserType={setUserType}
         />}/>
-        <Route path='/profile' element={<Profile
+        <Route path='/Salman_junior/profile' element={<Profile
         user={user.username}
         />}/>
-        <Route path='/AdminDashboard' element={<AdminDashboard/>}/>
-        <Route path='/reception' element={<Reception/>}/>
+        <Route path='/Salman_junior/AdminDashboard' element={<AdminDashboard/>}/>
+        <Route path='/Salman_junior/reception' element={<Reception/>}/>
         {/* DOCTOR */}
-        <Route  path='/showreservation' element={<ShowReservation/>}/>
-        <Route path='/reservation/:id' element={<ReservationDetail/>}/>
+        <Route  path='/Salman_junior/showreservation' element={<ShowReservation/>}/>
+        <Route path='/Salman_junior/reservation/:id' element={<ReservationDetail/>}/>
         
       </Route>
      </Routes>
