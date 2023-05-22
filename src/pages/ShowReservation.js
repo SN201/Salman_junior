@@ -33,7 +33,7 @@ function ShowReservation({key}) {
      
       <div key={reservation.pk}>
        
-        <Link to={`/reservation/${reservation.pk}`}>
+        <Link to={`/Salman_junior/reservation/${reservation.pk}`}>
         <Title>Reservation for {reservation.name}
         </Title> 
        <OptionButton> <Options>

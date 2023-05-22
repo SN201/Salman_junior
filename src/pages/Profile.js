@@ -18,7 +18,7 @@ auth.logout();
         <ProfileContainer>
         <ProfilePicture
      
-              src={auth.gender === 'male' ? "/Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "/Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
+              src={auth.gender === 'male' ? "./Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "./Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
               gender={auth.gender}
             />
       <Name>{auth.userType}</Name>

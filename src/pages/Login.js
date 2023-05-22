@@ -62,7 +62,7 @@ function Login({setUser, user,userType,setUserType}) {
       auth.Gender(response.data.sex);
       auth.doctorSpecialty(response.data.specialty);
       console.log(response.data);
-      navigate('/');
+      navigate('/Salman_junior/');
       setUser({ username, password });
     } catch (err) {
       console.log(err);

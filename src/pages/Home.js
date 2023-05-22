@@ -71,7 +71,7 @@ const ServicesGrid = () => {
   return (
     <ServicesContainer>
       <ServicesItem>
-        <ServicesIcon src="/Images/6.svg" alt="Service 1" />
+        <ServicesIcon src="./Images/6.svg" alt="Service 1" />
         <ServicesTitle>Secure Login System</ServicesTitle>
         <ServicesDescription>
          Our system provides a secure login page for doctors, receptionists, 
@@ -80,7 +80,7 @@ const ServicesGrid = () => {
         </ServicesDescription>
       </ServicesItem>
       <ServicesItem>
-        <ServicesIcon src="/images/2.svg" alt="Service 2" />
+        <ServicesIcon src="./images/2.svg" alt="Service 2" />
         <ServicesTitle>Appointment Reservation</ServicesTitle>
         <ServicesDescription>
         Patients can use our Flutter app to choose a convenient time slot for their appointment.
@@ -89,7 +89,7 @@ const ServicesGrid = () => {
         </ServicesDescription>
       </ServicesItem>
       <ServicesItem>
-        <ServicesIcon src="/images/3.svg" alt="Service 3" />
+        <ServicesIcon src="./images/3.svg" alt="Service 3" />
         <ServicesTitle>Medical Diagnosis and Treatment</ServicesTitle>
         <ServicesDescription>
         Doctors using the Flutter app can record the patient's symptoms, perform a diagnosis,
@@ -98,7 +98,7 @@ const ServicesGrid = () => {
         </ServicesDescription>
       </ServicesItem>
       <ServicesItem>
-        <ServicesIcon src="/images/4.svg" alt="Service 4" />
+        <ServicesIcon src="./images/4.svg" alt="Service 4" />
         <ServicesTitle>Prescription Management</ServicesTitle>
         <ServicesDescription>
         The Flutter app enables doctors to upload prescriptions for patients. 
@@ -153,6 +153,7 @@ const ServicesItem = styled.div`
 const ServicesIcon = styled.img`
   width: 70px;
   height: 50px;
+  transform: translateY(10px);
 `;
 
 const ServicesTitle = styled.h3`
@@ -193,21 +194,21 @@ const ContactGrid = () => {
   return (
     <ContactContainer>
       <ContactItem>
-        <ContactIcon src="/SVG_ContactUS/contact-24hr-svgrepo-com.svg" alt="Service 1" />
+        <ContactIcon src="./SVG_ContactUS/contact-24hr-svgrepo-com.svg" alt="Service 1" />
         <ContactTitle> Phone</ContactTitle>
         <ContactDescription>
         For general inquiries and support, please call us at <br/> +1-123-456-7890.
         </ContactDescription>
       </ContactItem>
       <ContactItem>
-        <ContactIcon src="/SVG_ContactUS/mail-svgrepo-com.svg" alt="Service 2" />
+        <ContactIcon src="./SVG_ContactUS/mail-svgrepo-com.svg" alt="Service 2" />
         <ContactTitle>Email</ContactTitle>
         <ContactDescription>
         For any inquiries or assistance, you can reach us via email at  <br/> info@examplehospital.com.
         </ContactDescription>
       </ContactItem>
       <ContactItem>
-        <ContactIcon src="/SVG_ContactUS/address-svgrepo-com.svg" alt="Service 3" />
+        <ContactIcon src="./SVG_ContactUS/address-svgrepo-com.svg" alt="Service 3" />
         <ContactTitle>Address</ContactTitle>
         <ContactDescription>
         Visit us at our main office located at 123 Main Street, City,
@@ -307,9 +308,9 @@ p{
   h2{
     font-size: 80px;
     font-weight: 800;
-    color: white;
+    color: wheat;
     text-align: center;
-    margin: 0px;
+    margin: -26px 0px 0px;
     letter-spacing: -5px;
 }
 p{
@@ -317,7 +318,8 @@ p{
   text-align: center;
   font-size:15px;
   letter-spacing :1.22px;
-  margin: -21px 0px 0px;
+  margin: -21px 30px 0px;
+
 }
 }
   }
@@ -349,22 +351,22 @@ const ImageSlider=()=>{
   return (
     <Carousel{...settings}> 
         <Wrap>
-          <img src= '/imageSlider/african-american-medic-using-stethoscope-ill-patient-check-heartbeat-examination-cure-sickness-specialist-doing-healthcare-consultation-while-nurse-giving-assistance.jpg' alt=""/>
+          <img src= './imageSlider/african-american-medic-using-stethoscope-ill-patient-check-heartbeat-examination-cure-sickness-specialist-doing-healthcare-consultation-while-nurse-giving-assistance.jpg' alt=""/>
         </Wrap>
           <Wrap>
-          <img src='/imageSlider/baby-visiting-doctor-checkup.jpg' alt=""/>
+          <img src='./imageSlider/baby-visiting-doctor-checkup.jpg' alt=""/>
         </Wrap>
             <Wrap>
-            <img src='/Logo/nguy-n-hi-p-sTTeaN4wwrU-unsplash.jpg' alt=""/>
+            <img src='./Logo/nguy-n-hi-p-sTTeaN4wwrU-unsplash.jpg' alt=""/>
           </Wrap>
             <Wrap>
-            <img src='/imageSlider/front-view-female-doctors-helping-patient.jpg' alt=""/>
+            <img src='./imageSlider/front-view-female-doctors-helping-patient.jpg' alt=""/>
           </Wrap>
             <Wrap>
-            <img src='/imageSlider/little-baby-being-health-clinic-vaccination.jpg' alt=""/>
+            <img src='./imageSlider/little-baby-being-health-clinic-vaccination.jpg' alt=""/>
           </Wrap>
                 <Wrap>
-                <img src='/imageSlider/nurse-writing-prescription-disabled-senior-woman-wheelchair-after-medical-examination.jpg' alt=""/>
+                <img src='./imageSlider/nurse-writing-prescription-disabled-senior-woman-wheelchair-after-medical-examination.jpg' alt=""/>
               </Wrap>
 
         </Carousel>
