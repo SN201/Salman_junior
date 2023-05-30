@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useAuth } from './Auth';
 import styled from 'styled-components';
+// import logo1 from '../../public/Logo/logo.svg';
+// import logo1 from './logo.svg';
 //import salman from'../../public/photo/22.svg';
 function Navbar() {
     const auth = useAuth();
@@ -10,7 +12,7 @@ function Navbar() {
   return (
     <Header>
           {/* IF NO USER  */}
-        <Logo src='./Logo/logo.svg' alt='2'/>
+        <Logo src='./Logo/logo.png' alt='1'/>
         <HeaderMenu>
         <NavLink to='/Salman_junior/'>
   <span>Home</span>
@@ -50,7 +52,7 @@ function Navbar() {
         {auth?.user !== null && a === "doctor" && (
      <NavLink to='/Salman_junior/profile'>
     <UserImage
-              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "../Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
+              src={auth.gender === 'male' ? "./Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "../Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.svg"}
               gender={auth.gender}/>
    </NavLink> 
   )}
@@ -58,7 +60,7 @@ function Navbar() {
      {auth?.user !== null && a === "reception" && (
      <NavLink to='/Salman_junior/profile'>
     <UserImage
-              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "../Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.png"}
+              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "../Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.svg"}
               gender={auth.gender}/>
    </NavLink> 
   )}
@@ -66,7 +68,7 @@ function Navbar() {
     {auth?.user !== null  && a === "admin" && (
     <NavLink to='/Salman_junior/profile'>
     <UserImage 
-              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.png" : "../Images/kisspng-avatar-computer-icons-employers-5adee1aa013f97.4762672515245562020051.png"}
+              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "../Images/kisspng-avatar-computer-icons-employers-5adee1aa013f97.4762672515245562020051.svg"}
               gender={auth.gender}/>
    </NavLink>
   )}
@@ -91,6 +93,8 @@ overflow-x:hidden;
 `
 const Logo = styled.img` 
 width:75px;
+z-index:2;
+height:55px;
 `
 const HeaderMenu = styled.div`
 display: flex;

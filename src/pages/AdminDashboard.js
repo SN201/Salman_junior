@@ -861,7 +861,7 @@ useEffect(() => {
         {/* <Button   onClick={() => handleUpdateSection(index, {...section,Name:sectionNames[index], }) } variant="contained">update</Button> */}
         </td>
    
-        <td>  <Button  onClick={() => handleDeleteSection(index)} variant="contained">Delete</Button></td>
+        <td>  <Button style={{ transform: 'translateY(-3px)' }} onClick={() => handleDeleteSection(index)} variant="contained">Update</Button></td>
     
     </tr>
     ))}
@@ -959,7 +959,7 @@ th,
 td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: left;   
 }
 
 th {
