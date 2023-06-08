@@ -60,7 +60,7 @@ function Navbar() {
      {auth?.user !== null && a === "reception" && (
      <NavLink to='/Salman_junior/profile'>
     <UserImage
-              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "../Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.svg"}
+              src={auth.gender === 'male' ? "./Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "./Images/kisspng-computer-icons-symbol-icon-design-woman-avatar-5b26f901289e31.2337261715292807691664.svg"}
               gender={auth.gender}/>
    </NavLink> 
   )}
@@ -68,7 +68,7 @@ function Navbar() {
     {auth?.user !== null  && a === "admin" && (
     <NavLink to='/Salman_junior/profile'>
     <UserImage 
-              src={auth.gender === 'male' ? "../Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "../Images/kisspng-avatar-computer-icons-employers-5adee1aa013f97.4762672515245562020051.svg"}
+              src={auth.gender === 'male' ? "./Images/kisspng-computer-icons-avatar-clip-art-sales-person-5b187a2cad18b2.600745161528330796709.svg" : "./Images/kisspng-avatar-computer-icons-employers-5adee1aa013f97.4762672515245562020051.svg"}
               gender={auth.gender}/>
    </NavLink>
   )}

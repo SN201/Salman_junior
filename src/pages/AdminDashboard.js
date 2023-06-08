@@ -1,6 +1,7 @@
 import React, { useState ,useEffect} from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../api/axi';
 import Button from '@material-ui/core/Button'
 function AdminDashboard() {
   // state for users, doctors, and sections
@@ -57,7 +58,7 @@ function AdminDashboard() {
       formData.append('personal_id', newUser.personal_id);
   
       // Send POST request to backend API to add new user
-      const response = await axios.post('https://hospitalamjad.pythonanywhere.com/phddamin/patient/', formData, {
+      const response = await axios.post('/phddamin/patient/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -83,7 +84,7 @@ function AdminDashboard() {
     try {
       // Send PUT request to backend API to update the section
       const response = await axios.put(
-        `https://hospitalamjad.pythonanywhere.com/phddamin/patient/${users[index].pk}/`,
+        `/phddamin/patient/${users[index].pk}/`,
         updatedUser,
         {
           headers: {
@@ -110,7 +111,7 @@ function AdminDashboard() {
   const handleDeleteUser = async (index) => {
     try {
       // Send DELETE request to backend API to delete the section
-      await axios.delete(`https://hospitalamjad.pythonanywhere.com/phddamin/patient/${users[index].pk}/`, {
+      await axios.delete(`/phddamin/patient/${users[index].pk}/`, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -129,7 +130,7 @@ function AdminDashboard() {
     console.log(newDoctor);
     try {
       // Send POST request to backend API to add new section
-      const response = await axios.post('https://hospitalamjad.pythonanywhere.com/phddamin/specialty/', {
+      const response = await axios.post('/phddamin/specialty/', {
         Name: newSection.name,
       }, {
         headers: {
@@ -150,7 +151,7 @@ function AdminDashboard() {
   const handleDeleteSection = async (index) => {
     try {
       // Send DELETE request to backend API to delete the section
-      await axios.delete(`https://hospitalamjad.pythonanywhere.com/phddamin/specialty/${sections[index].pk}/`, {
+      await axios.delete(`/phddamin/specialty/${sections[index].pk}/`, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -182,7 +183,7 @@ const handleAddDoctor = async (event) => {
     data.append('phone', newDoctor.phone);
     data.append('age', newDoctor.age);
 
-    const response = await axios.post('http://hospitalamjad.pythonanywhere.com/phddamin/doctor/', data, {
+    const response = await axios.post('/phddamin/doctor/', data, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -210,7 +211,7 @@ const handleAddDoctor = async (event) => {
   const handleDeleteDoctor = async (index) => {
     try {
       // Send DELETE request to backend API to delete the section
-      await axios.delete(`https://hospitalamjad.pythonanywhere.com/phddamin/doctor/${doctors[index].pk}/`, {
+      await axios.delete(`/phddamin/doctor/${doctors[index].pk}/`, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -227,22 +228,22 @@ const handleAddDoctor = async (event) => {
   //diplay Doc & User & Spci
 useEffect(() => {
   async function fetchSpecialtyData() {
-    const response = await axios.get('https://hospitalamjad.pythonanywhere.com/phddamin/specialty/');
+    const response = await axios.get('/phddamin/specialty/');
     setSections(response.data);
     console.log(response.data);
   }
   async function fetchDoctorData() {
-    const response = await axios.get('http://hospitalamjad.pythonanywhere.com/phddamin/doctor/');
+    const response = await axios.get('/phddamin/doctor/');
     setDoctors(response.data);
     console.log(response.data);
   }
   async function fetchPatientData() {
-    const response = await axios.get('http://hospitalamjad.pythonanywhere.com/phddamin/patient/');
+    const response = await axios.get('/phddamin/patient/');
     setUsers(response.data);
     console.log(response.data);
   }
   // fetch specialties from backend
-  axios.get('https://hospitalamjad.pythonanywhere.com/phddamin/specialty/')
+  axios.get('/phddamin/specialty/')
   .then(response => setSpecialties(response.data))
   .catch(error => console.error(error));
   fetchSpecialtyData();

@@ -71,7 +71,7 @@ const ServicesGrid = () => {
   return (
     <ServicesContainer>
       <ServicesItem>
-        <ServicesIcon src="/Images/6.svg" alt="Service 1" />
+        <ServicesIcon src="./Images/6.svg" alt="Service 1" />
         <ServicesTitle>Secure Login System</ServicesTitle>
         <ServicesDescription>
          Our system provides a secure login page for doctors, receptionists, 
@@ -352,7 +352,7 @@ const ImageSlider=()=>{
   return (
     <Carousel{...settings}> 
         <Wrap>
-          <img src= './imageSlider/african-american-medic-using-stethoscope-ill-patient-check-heartbeat-examination-cure-sickness-specialist-doing-healthcare-consultation-while-nurse-giving-assistance.jpg' alt=""/>
+          <img src= '../imageSlider/african-american-medic-using-stethoscope-ill-patient-check-heartbeat-examination-cure-sickness-specialist-doing-healthcare-consultation-while-nurse-giving-assistance.jpg' alt="1"/>
         </Wrap>
           <Wrap>
           <img src='./imageSlider/baby-visiting-doctor-checkup.jpg' alt=""/>

@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
  import styled from 'styled-components';
-import axios from 'axios';
+//import axios from 'axios';
+import axios from '../api/axi';
 import { useAuth } from '../components/Auth';
 // import { Link } from 'react-router-dom';
 //import ReservationDetail from './ReservationDetail';
@@ -17,7 +18,7 @@ function ShowReservation({key}) {
                 Authorization: `Bearer ${auth.auth}`,
             },
           };
-          const response = await axios.get('https://hospitalamjad.pythonanywhere.com/doctor/showreservation/', config);
+          const response = await axios.get('/doctor/showreservation/', config);
           setReservations(response.data);
           console.log(response.data);
         }
